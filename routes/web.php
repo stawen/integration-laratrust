@@ -19,3 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+// Administrator & SuperAdministrator Control Panel Routes
+Route::group(['middleware' => ['role:administrator']], function () {
+    Route::resource('users', 'UsersController');
+    Route::resource('permission', 'PermissionController');
+    Route::resource('roles', 'RolesController');
+});
+// Dashboard
+Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
+
+
