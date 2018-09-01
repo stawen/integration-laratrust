@@ -25,21 +25,21 @@
 
 clear
 
-read -p "Do you want to upgrade to PHP 7? " -n 1 -r
+read -p "Do you want to upgrade to PHP 7.1? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     sudo add-apt-repository ppa:ondrej/php
     sudo apt-get update
-    sudo apt-get install libapache2-mod-php7.0 -y
+    sudo apt-get install libapache2-mod-php7.1 -y
     sudo a2dismod php5
-    sudo a2enmod php7.0
-    sudo apt-get install php7.0-dom -y
-    sudo apt-get install php7.0-mbstring -y
-    sudo apt-get install php7.0-zip -y
-    sudo apt-get install php7.0-mysql -y
-    sudo apt-get install php7.0-curl -y
-    sudo apt-get install php7.0-gd php-imagick php7.0-intl php7.0-mcrypt php7.0-json php7.0-opcache php7.0-bcmath php7.0-soap php7.0-xml -y
+    sudo a2enmod php7.1
+    sudo apt-get install php7.1-dom -y
+    sudo apt-get install php7.1-mbstring -y
+    sudo apt-get install php7.1-zip -y
+    sudo apt-get install php7.1-mysql -y
+    sudo apt-get install php7.1-curl -y
+    sudo apt-get install php7.1-gd php-imagick php7.1-intl php7.1-mcrypt php7.1-json php7.1-opcache php7.1-bcmath php7.1-soap php7.1-xml -y
     sudo service apache2 restart
-    echo "Congragulations you have upgraded your dev box to PHP 7"
+    echo "Congragulations you have upgraded your dev box to PHP 7.1"
 fi
