@@ -1,5 +1,8 @@
 <?php
 
+use App\Admin\UsersController;
+use App\Admin\RolesController;
+use App\Admin\PermissionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

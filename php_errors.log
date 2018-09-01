@@ -1,0 +1,1 @@
+[31-Aug-2018 23:53:33 UTC] PHP Fatal error:  Cannot use App\Models\User as User because the name is already in use in /home/ubuntu/workspace/app/Http/Controllers/HomeController.php on line 7
